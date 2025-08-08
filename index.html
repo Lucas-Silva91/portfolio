@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucas Cristiano | Desenvolvedor Backend</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 scroll-smooth">
+
+  <!-- NAV -->
+  <nav class="bg-white shadow fixed w-full z-10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Lucas Cristiano</h1>
+      <div class="space-x-6">
+        <a href="#sobre" class="hover:text-blue-600">Sobre</a>
+        <a href="#projetos" class="hover:text-blue-600">Projetos</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#contato" class="hover:text-blue-600">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-blue-500 to-blue-700 text-white text-center px-4 pt-24">
+    <img src="img/lucas.jpg" alt="Foto de Lucas Cristiano" class="w-32 h-32 rounded-full border-4 border-white mb-4 shadow-lg object-cover" />
+    <h2 class="text-4xl font-bold mb-2">Olá, sou Lucas Cristiano</h2>
+    <p class="text-lg max-w-xl">Desenvolvedor Backend com foco em engenharia de software, mensageria assíncrona e aplicações escaláveis.</p>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="max-w-4xl mx-auto py-16 px-4">
+    <h3 class="text-2xl font-bold mb-6">Sobre mim</h3>
+    <p class="text-lg leading-relaxed">
+      Sou Desenvolvedor Backend com foco em engenharia de software, especialista em construir aplicações escaláveis, performáticas e orientadas a boas práticas de arquitetura e mensageria assíncrona. Tenho forte atuação com a stack Node.js, NestJS, PostgreSQL, ClickHouse e RabbitMQ.
+      <br/><br/>
+      Atualmente atuo na Mix Fiscal, desenvolvendo sistemas tributários robustos e de alta performance. Tenho experiência sólida em modelagem de dados (SQL e NoSQL), automações de processos backend e práticas modernas de desenvolvimento colaborativo.
+      <br/><br/>
+      Sou pós-graduado em Engenharia de Software com foco em bancos de dados, arquitetura orientada a serviços (SOA), gerenciamento de projetos e Design Thinking.
+      <br/><br/>
+      Além disso, atuei anteriormente em suporte técnico em software house, o que ampliou minha visão analítica e comunicação com usuários e times multidisciplinares.
+    </p>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="bg-gray-200 py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold mb-6">Projetos</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 shadow rounded">
+          <h4 class="font-semibold text-lg">Sistema de Comissionamento</h4>
+          <p class="text-sm">API com NestJS e RabbitMQ para gestão de publishers/consumers entre diversos serviços.</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded">
+          <h4 class="font-semibold text-lg">Monitor Fiscal</h4>
+          <p class="text-sm">Automações para monitoramento de boletos via CNPJ utilizando ClickHouse, N8N e integrações bancárias.</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded">
+          <h4 class="font-semibold text-lg">Orquestração com Airflow</h4>
+          <p class="text-sm">Pipeline de tarefas e ETLs usando Apache Airflow para integrações de dados e envio de notificações assíncronas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="max-w-4xl mx-auto py-16 px-4">
+    <h3 class="text-2xl font-bold mb-6">Skills</h3>
+    <div class="flex flex-wrap gap-3">
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Node.js</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">NestJS</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">TypeScript</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">PostgreSQL</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">ClickHouse</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">RabbitMQ</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Apache Airflow</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Docker</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Sequelize</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">TypeORM</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Knex</span>
+      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">GitHub</span>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="bg-gray-200 py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-6">Contato</h3>
+      <p class="mb-2">Email: <a href="mailto:lcristiano.dev@gmail.com" class="text-blue-600">lcristiano.dev@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/lucascristiano" class="text-blue-600" target="_blank">linkedin.com/in/lucascristiano</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white text-center py-4">
+    © 2025 Lucas Cristiano. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
