@@ -3,97 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lucas Cristiano | Desenvolvedor Backend</title>
+  <title>Lucas Cristiano | Backend Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    .fade-in {
+      animation: fadeIn 1s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(24px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .noise-bg {
+      background: url('https://grainy-gradients.vercel.app/noise.svg'), linear-gradient(135deg, #18181b 0%, #23272f 100%);
+      background-blend-mode: overlay;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 scroll-smooth">
+<body class="noise-bg text-gray-100 scroll-smooth min-h-screen">
 
   <!-- NAV -->
-  <nav class="bg-white shadow fixed w-full z-10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Lucas Cristiano</h1>
-      <div class="space-x-6">
-        <a href="#sobre" class="hover:text-blue-600">Sobre</a>
-        <a href="#projetos" class="hover:text-blue-600">Projetos</a>
-        <a href="#skills" class="hover:text-blue-600">Skills</a>
-        <a href="#contato" class="hover:text-blue-600">Contato</a>
+  <nav class="fixed w-full z-20 bg-black/70 backdrop-blur border-b border-gray-800 fade-in">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2">
+        <img src="img/lucas.jpg" alt="Lucas Cristiano" class="w-8 h-8 rounded-full border border-gray-700 shadow-lg" />
+        <span class="text-lg font-bold tracking-tight text-gray-100">Lucas Cristiano</span>
+      </a>
+      <div class="flex gap-6 text-base font-medium">
+        <a href="#sobre" class="hover:text-blue-400 transition">Sobre</a>
+        <a href="#projetos" class="hover:text-blue-400 transition">Projetos</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#contato" class="hover:text-blue-400 transition">Contato</a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-blue-500 to-blue-700 text-white text-center px-4 pt-24">
-    <img src="img/lucas.jpg" alt="Foto de Lucas Cristiano" class="w-32 h-32 rounded-full border-4 border-white mb-4 shadow-lg object-cover" />
-    <h2 class="text-4xl font-bold mb-2">Olá, sou Lucas Cristiano</h2>
-    <p class="text-lg max-w-xl">Desenvolvedor Backend com foco em engenharia de software, mensageria assíncrona e aplicações escaláveis.</p>
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-28 fade-in relative">
+    <img src="img/lucas.jpg" alt="Foto de Lucas Cristiano" class="w-32 h-32 rounded-full border-4 border-blue-500 mb-6 object-cover shadow-2xl" />
+    <h1 class="text-4xl md:text-5xl font-bold mb-3 text-gray-100 tracking-tight">Olá, sou Lucas Cristiano</h1>
+    <p class="text-lg md:text-2xl text-gray-400 max-w-xl mx-auto mb-8">
+      Backend Developer apaixonado por arquitetura, mensageria assíncrona e sistemas escaláveis.
+    </p>
+    <div class="flex gap-3 justify-center mb-8">
+      <a href="#projetos" class="px-6 py-2 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition shadow-lg">Projetos</a>
+      <a href="#contato" class="px-6 py-2 rounded-full border border-blue-600 text-blue-400 font-medium hover:bg-blue-900/30 transition">Contato</a>
+    </div>
+    <!-- Imagem decorativa minimalista -->
+    <img src="https://cdn.jsdelivr.net/gh/lucascristiano/assets@main/code-art-1.svg" alt="Code Art" class="absolute top-10 right-10 w-24 opacity-20 pointer-events-none select-none hidden md:block" />
   </section>
 
   <!-- SOBRE -->
-  <section id="sobre" class="max-w-4xl mx-auto py-16 px-4">
-    <h3 class="text-2xl font-bold mb-6">Sobre mim</h3>
-    <p class="text-lg leading-relaxed">
-      Sou Desenvolvedor Backend com foco em engenharia de software, especialista em construir aplicações escaláveis, performáticas e orientadas a boas práticas de arquitetura e mensageria assíncrona. Tenho forte atuação com a stack Node.js, NestJS, PostgreSQL, ClickHouse e RabbitMQ.
-      <br/><br/>
-      Atualmente atuo na Mix Fiscal, desenvolvendo sistemas tributários robustos e de alta performance. Tenho experiência sólida em modelagem de dados (SQL e NoSQL), automações de processos backend e práticas modernas de desenvolvimento colaborativo.
-      <br/><br/>
-      Sou pós-graduado em Engenharia de Software com foco em bancos de dados, arquitetura orientada a serviços (SOA), gerenciamento de projetos e Design Thinking.
-      <br/><br/>
-      Além disso, atuei anteriormente em suporte técnico em software house, o que ampliou minha visão analítica e comunicação com usuários e times multidisciplinares.
+  <section id="sobre" class="max-w-2xl mx-auto py-16 px-4 fade-in">
+    <h2 class="text-2xl font-bold mb-4 text-gray-100">Sobre mim</h2>
+    <p class="text-base md:text-lg text-gray-400 leading-relaxed">
+      Sou desenvolvedor backend com experiência em engenharia de software, arquitetura escalável e mensageria assíncrona. Trabalho principalmente com <span class="font-semibold text-blue-400">Node.js, NestJS, PostgreSQL, ClickHouse e RabbitMQ</span>.<br><br>
+      Atualmente na <span class="font-semibold text-blue-400">Mix Fiscal</span>, desenvolvo sistemas tributários robustos e performáticos. Tenho experiência em modelagem de dados (SQL/NoSQL), automações backend e práticas modernas de desenvolvimento.<br><br>
+      Pós-graduado em Engenharia de Software, com foco em bancos de dados, SOA e Design Thinking.
     </p>
+   
   </section>
 
   <!-- PROJETOS -->
-  <section id="projetos" class="bg-gray-200 py-16 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold mb-6">Projetos</h3>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white p-4 shadow rounded">
-          <h4 class="font-semibold text-lg">Sistema de Comissionamento</h4>
-          <p class="text-sm">API com NestJS e RabbitMQ para gestão de publishers/consumers entre diversos serviços.</p>
+  <section id="projetos" class="bg-gradient-to-b from-gray-900/80 to-black py-16 px-4 fade-in">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8 text-gray-100 text-center">Projetos</h2>
+      <!--<div class="grid md:grid-cols-3 gap-6">
+        Projeto 1: Comissionamento (NestJS + RabbitMQ)
+        <div class="rounded-xl border border-gray-800 bg-gray-900/60 p-5 flex flex-col items-center hover:shadow-2xl hover:border-blue-700 transition">
+          <span class="mb-3 flex gap-2 text-blue-400">
+            <img src="public/icons/nestjs-original.svg" alt="NestJS logo" class="w-8 h-8" >
+            <img src="public/icons/rabbitmq-original.svg" alt="RabbitMQ" class="w-8 h-8" />
+          </span>
+          <h3 class="font-semibold text-lg mb-1 text-gray-100">Comissionamento</h3>
+          <p class="text-sm text-gray-400 text-center">API com NestJS e RabbitMQ para gestão de publishers/consumers entre serviços.</p>
+          <img src="https://cdn.jsdelivr.net/gh/lucascristiano/assets@main/project-queue.svg" alt="Fila Mensageria" class="w-20 mt-4 opacity-20" />
         </div>
-        <div class="bg-white p-4 shadow rounded">
-          <h4 class="font-semibold text-lg">Monitor Fiscal</h4>
-          <p class="text-sm">Automações para monitoramento de boletos via CNPJ utilizando ClickHouse, N8N e integrações bancárias.</p>
+        <div class="rounded-xl border border-gray-800 bg-gray-900/60 p-5 flex flex-col items-center hover:shadow-2xl hover:border-blue-700 transition">
+          <span class="mb-3 flex gap-2 text-blue-400">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clickhouse/clickhouse-original.svg" alt="ClickHouse" class="w-8 h-8" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/n8n/n8n-plain.svg" alt="N8N" class="w-8 h-8" />
+          </span>
+          <h3 class="font-semibold text-lg mb-1 text-gray-100">Monitor Fiscal</h3>
+          <p class="text-sm text-gray-400 text-center">Monitoramento de boletos via CNPJ usando ClickHouse, N8N e integrações bancárias.</p>
+          <img src="https://cdn.jsdelivr.net/gh/lucascristiano/assets@main/project-monitor.svg" alt="Monitor Fiscal Art" class="w-20 mt-4 opacity-20" />
         </div>
-        <div class="bg-white p-4 shadow rounded">
-          <h4 class="font-semibold text-lg">Orquestração com Airflow</h4>
-          <p class="text-sm">Pipeline de tarefas e ETLs usando Apache Airflow para integrações de dados e envio de notificações assíncronas.</p>
+        <!--<div class="rounded-xl border border-gray-800 bg-gray-900/60 p-5 flex flex-col items-center hover:shadow-2xl hover:border-blue-700 transition">
+          <span class="mb-3 flex gap-2 text-blue-400">
+            <img src="https://cdn.jsdelivr.net/gh/lucascristiano/assets@main/airflow-logo.svg" alt="Airflow" class="w-8 h-8" />
+          </span>
+          <h3 class="font-semibold text-lg mb-1 text-gray-100">Orquestração Airflow</h3>
+          <p class="text-sm text-gray-400 text-center">Pipelines e ETLs com Apache Airflow para integrações e notificações assíncronas.</p>
+          <img src="https://cdn.jsdelivr.net/gh/lucascristiano/assets@main/project-etl.svg" alt="ETL Art" class="w-20 mt-4 opacity-20" />
         </div>
+      </div>-->
+      <div class="text-center text-gray-600 text-base py-12 opacity-60">
+        Projetos em breve.
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="max-w-4xl mx-auto py-16 px-4">
-    <h3 class="text-2xl font-bold mb-6">Skills</h3>
-    <div class="flex flex-wrap gap-3">
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Node.js</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">NestJS</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">TypeScript</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">PostgreSQL</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">ClickHouse</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">RabbitMQ</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Apache Airflow</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Docker</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Sequelize</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">TypeORM</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">Knex</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded">GitHub</span>
+  <section id="skills" class="max-w-3xl mx-auto py-16 px-4 fade-in">
+    <h2 class="text-2xl font-bold mb-8 text-gray-100 text-center">Skills</h2>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-5 h-5" alt="Node.js"/> Node.js
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/nestjs-original.svg" class="w-5 h-5" alt="NestJS"/> NestJS
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/typescript-original.svg" class="w-5 h-5" alt="TypeScript"/> TypeScript
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/postgresql-original.svg" class="w-5 h-5" alt="PostgreSQL"/> PostgreSQL
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/rabbitmq-original.svg" class="w-5 h-5" alt="RabbitMQ"/> RabbitMQ
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/docker-original.svg" class="w-5 h-5" alt="Docker"/> Docker
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/sequelize-original.svg" class="w-5 h-5" alt="Sequelize"/> Sequelize
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/typeorm.svg" class="w-5 h-5" alt="TypeORM"/> TypeORM
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/knexjs-original.svg" class="w-5 h-5" alt="Knex.js"/> Knex.js
+      </span>
+      <span class="flex items-center gap-2 bg-gray-800/80 text-gray-100 px-4 py-1.5 rounded-full text-base font-medium shadow">
+        <img src="public/icons/github-original.svg" class="w-5 h-5" alt="GitHub"/> GitHub
+      </span>
     </div>
+ 
   </section>
 
   <!-- CONTATO -->
-  <section id="contato" class="bg-gray-200 py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-2xl font-bold mb-6">Contato</h3>
-      <p class="mb-2">Email: <a href="mailto:lcristiano.dev@gmail.com" class="text-blue-600">lcristiano.dev@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/lucascristiano" class="text-blue-600" target="_blank">linkedin.com/in/lucascristiano</a></p>
+  <section id="contato" class="bg-gradient-to-b from-gray-900/80 to-black py-16 px-4 fade-in">
+    <div class="max-w-md mx-auto text-center border border-gray-800 rounded-xl p-8 bg-gray-900/60 shadow-lg">
+      <h2 class="text-2xl font-bold mb-6 text-gray-100">Contato</h2>
+      <div class="flex flex-col gap-4 items-center">
+        <a href="mailto:lcristiano.dev@gmail.com" class="flex items-center gap-2 text-blue-400 hover:underline text-base font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor"/><path d="M3 7l9 6 9-6" stroke="currentColor"/></svg>
+          lcristiano.dev@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/lucascristiano" target="_blank" class="flex items-center gap-2 text-blue-400 hover:underline text-base font-medium">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4" fill="#2563EB"/><path d="M7 10v6M7 7v.01M12 10v6m0 0v-3a2 2 0 1 1 4 0v3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          linkedin.com/in/lucascristiano
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white text-center py-4">
-    © 2025 Lucas Cristiano. Todos os direitos reservados.
+  <footer class="text-gray-600 text-center py-6 mt-10 fade-in">
+    <div class="flex justify-center gap-4 mb-2">
+      <a href="https://github.com/lucascristiano" target="_blank" class="hover:text-blue-400 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.39-3.87-1.39-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.08.79 2.18v3.24c0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/lucascristiano" target="_blank" class="hover:text-blue-400 transition">
+        <svg class="w-6 h-6" fill="#2563EB" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4" fill="#2563EB"/><path d="M7 10v6M7 7v.01M12 10v6m0 0v-3a2 2 0 1 1 4 0v3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:lcristiano.dev@gmail.com" class="hover:text-blue-400 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor"/><path d="M3 7l9 6 9-6" stroke="currentColor"/></svg>
+      </a>
+    </div>
+    <span class="text-xs">© 2025 Lucas Cristiano</span>
+    
   </footer>
 
 </body>
